@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ivy.green.bolt.WelcomeActivity"
+    android:background="@drawable/background"
+    android:padding="8dp">
+
+    <ImageView
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_welcome"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_welcome"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_welcome"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_welcome"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <TextView
+        android:text="Welcome to bolt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#667E89"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_welcome"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_welcome"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_welcome"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_welcome"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <TextView
+        android:text="Managing your electrical maintenance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/caption"
+        android:fontFamily="casual"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_welcome"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_welcome"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_welcome"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_welcome"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Login"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title.Inverse"
+        android:onClick="login"
+
+        app:layout_constraintLeft_toLeftOf="@+id/activity_welcome"
+        app:layout_constraintTop_toTopOf="@+id/activity_welcome"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_welcome"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_welcome"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <Button
+        android:text="Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/register"
+        android:backgroundTint="@color/colorSecondaryAccent"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title.Inverse"
+        android:onClick="register"
+
+        app:layout_constraintLeft_toLeftOf="@+id/activity_welcome"
+        app:layout_constraintTop_toTopOf="@+id/activity_welcome"
+        app:layout_constraintRight_toRightOf="@+id/activity_welcome"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_welcome"
+        app:layout_constraintVertical_bias="0.78" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "864847437137",
+    "firebase_url": "https://bolt-60a49.firebaseio.com",
+    "project_id": "bolt-60a49",
+    "storage_bucket": "bolt-60a49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864847437137:android:7879ae6c748cea22",
+        "android_client_info": {
+          "package_name": "com.ivy.green.bolt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864847437137-88pp0epc6as53bvggqcb46vt8i780fp6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ivy.green.bolt",
+            "certificate_hash": "09D448E4A5594B59FF8607B8D2043F8CA7AE962E"
+          }
+        },
+        {
+          "client_id": "864847437137-q0l19rg1m6l4pbuokodkebn665krhinj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdVgKEIaCbvR4XZ7qQv28ojErYVGjXSbk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864847437137-q0l19rg1m6l4pbuokodkebn665krhinj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

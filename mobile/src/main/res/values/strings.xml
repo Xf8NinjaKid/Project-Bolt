@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Bolt</string>
+
+    <string name="no_location_detected">
+        No location detected. Make sure location is enabled on the device.
+    </string>
+
+    <string name="country_label">Latitude</string>
+
+
+    <string name="false_location">
+        Unfortunately at this moment it is not possible to scale the app to work in every country so we have decided that for now people living in India are only able to use it but hopefully we can soon  make this available in many different countries.
+    </string>
+    <string name="Intro">Hello, Boungiorno, Buenas Dias, Namasete. These are the four language that I speak. My name is Bibaswan Bhawal and I come from india but i have lived outside of india most of my life majority of the time i was in Italy and only three years a go I moved to angola where spent thre year going the Luanda International School of Angola.</string>
+    <string name="title_activity_home">HomeActivity</string>
+</resources>
