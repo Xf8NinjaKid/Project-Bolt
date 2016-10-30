@@ -1,12 +1,12 @@
 package com.ivy.green.bolt;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -114,8 +114,10 @@ public class UserActivity extends AppCompatActivity {
 
                                     Log.i(TAG, log);
 
-                                    Intent intent = new Intent(UserActivity.this, HomeActivity.class);
-                                    startActivity(intent);
+                                    getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+                                    getSupportActionBar().hide();
+
+                                    setContentView(R.layout.setup_user);
 
                                     register.setVisibility(View.GONE);
 
