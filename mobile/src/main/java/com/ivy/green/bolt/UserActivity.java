@@ -55,6 +55,14 @@ public class UserActivity extends AppCompatActivity {
 
     }
 
+    public void onCreateSetup(){
+        TextView header = (TextView) findViewById(R.id.textView5);
+        TextView body = (TextView) findViewById(R.id.textView7);
+    }
+
+    public void setup(View view){
+        onCreateSetup();
+    }
 
     public void RegisterB(View view){
         Email = Email_input.getText().toString();
