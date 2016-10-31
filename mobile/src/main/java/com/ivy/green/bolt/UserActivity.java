@@ -19,6 +19,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.regex.Pattern;
 
+import static android.view.View.GONE;
+
 public class UserActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
@@ -55,13 +57,20 @@ public class UserActivity extends AppCompatActivity {
 
     }
 
-    public void onCreateSetup(){
+    public void onCreateSetup1(){
         TextView header = (TextView) findViewById(R.id.textView5);
         TextView body = (TextView) findViewById(R.id.textView7);
+
+        header.setVisibility(View.GONE);
+        body.setVisibility(View.GONE);
+
+
+
+
     }
 
     public void setup(View view){
-        onCreateSetup();
+        onCreateSetup1();
     }
 
     public void RegisterB(View view){
@@ -100,7 +109,7 @@ public class UserActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
-                                error.setVisibility(View.GONE);
+                                error.setVisibility(GONE);
 
                                 if (!task.isSuccessful()) {
                                     error.setVisibility(View.VISIBLE);
@@ -127,7 +136,7 @@ public class UserActivity extends AppCompatActivity {
 
                                     setContentView(R.layout.setup_user);
 
-                                    register.setVisibility(View.GONE);
+                                    register.setVisibility(GONE);
 
                                 }
 
