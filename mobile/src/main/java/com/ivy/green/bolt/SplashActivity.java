@@ -336,7 +336,7 @@ public class SplashActivity extends AppCompatActivity implements
         if (mLastLocation != null) {
 
             String country = getCountryName(this, mLastLocation.getLongitude(), mLastLocation.getLatitude());
-            //Log.i(TAG, "area locale = " + String.valueOf(mLastLocation.getLatitude()) + String.valueOf(mLastLocation.getLongitude()));
+            Log.i(TAG, "area locale = " + String.valueOf(mLastLocation.getLatitude()) + " " + String.valueOf(mLastLocation.getLongitude()) + " : " + country);
 
             if (!country.equals("0")) {
                 if (country.equals("Egypt") || country.equals("India")) {
