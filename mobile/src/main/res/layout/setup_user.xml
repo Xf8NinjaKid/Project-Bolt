@@ -44,25 +44,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView8"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintVertical_bias="1.0"
         android:onClick="setup"
         android:visibility="gone" />
 
 
-
     <ScrollView
         android:layout_width="0dp"
         android:id="@+id/scrollView"
-        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,8 +70,8 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:layout_width="327dp"
-                android:layout_height="204dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:srcCompat="@drawable/taipei_2560x1600_taiwan_101_night_artwork_hd_2873"
                 android:id="@+id/imageView8"
                 android:scaleType="centerCrop"
@@ -81,7 +81,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                android:adjustViewBounds="false" />
 
 
             <TextView
@@ -122,31 +123,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:textSize="10sp"
-                    android:text="First Name"
-                    android:ems="10"
-                    android:id="@+id/editText3"
-                    android:layout_marginRight="0dp"
-                    android:layout_weight="1"
-                    android:maxLines="1"
-                    android:selectAllOnFocus="true" />
 
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:textSize="10sp"
-                    android:text="Last Name"
-                    android:ems="10"
-                    android:id="@+id/editText4"
-                    android:layout_weight="1"
-                    android:maxLines="1"
-                    android:selectAllOnFocus="true"
-                    android:fadingEdge="horizontal" />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name_first"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:hint="First Name"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name_last"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:hint="Last Name"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -154,61 +172,96 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textNoSuggestions"
+
+                        android:hint="city"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText4"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textNoSuggestions"
+
+                        android:hint="Area"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
                 <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textNoSuggestions"
-                    android:textSize="10sp"
-                    android:text="City"
-                    android:ems="10"
                     android:id="@+id/editText5"
-                    android:layout_marginRight="0dp"
-                    android:layout_weight="1"
-                    android:maxLines="1"
-                    android:selectAllOnFocus="true" />
-
-                <EditText
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textNoSuggestions"
-                    android:textSize="10sp"
-                    android:text="Area"
-                    android:ems="10"
-                    android:id="@+id/editText6"
-                    android:layout_weight="1"
-                    android:maxLines="1"
+                    android:inputType="textPostalAddress"
+
+                    android:hint="Address"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
                     android:selectAllOnFocus="true"
-                    android:fadingEdge="horizontal" />
+                    android:textAlignment="textStart"
+                    android:contentDescription="Enter password"
+                    android:maxLines="1" />
 
-            </LinearLayout>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:inputType="textPostalAddress"
-                android:text="Address"
-                android:ems="10"
-                android:id="@+id/editText7"
-                android:layout_weight="1"
-                android:textSize="10sp"
-                android:maxLines="1"/>
+            </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:textSize="10sp"
-                    android:text="postal code"
-                    android:id="@+id/editText8"
-                    android:layout_weight="1"
-                    android:maxLines="1"
-                    android:selectAllOnFocus="true"
-                    android:fadingEdge="horizontal" />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText6"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+
+                        android:hint="Zip Code"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
 
 
                 <Spinner
