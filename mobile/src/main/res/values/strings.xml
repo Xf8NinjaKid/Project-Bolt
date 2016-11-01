@@ -13,4 +13,16 @@
     </string>
     <string name="Intro">Hello, Boungiorno, Buenas Dias, Namasete. These are the four language that I speak. My name is Bibaswan Bhawal and I come from india but i have lived outside of india most of my life majority of the time i was in Italy and only three years a go I moved to angola where spent thre year going the Luanda International School of Angola.</string>
     <string name="title_activity_home">HomeActivity</string>
+
+    <string-array name="android_dropdown_arrays">
+        <item>Choose a Item</item>
+        <item>Drop Down List 1</item>
+        <item>Drop Down List 2</item>
+        <item>Drop Down List 3</item>
+        <item>Drop Down List 5</item>
+        <item>Drop Down List 6</item>
+        <item>Drop Down List 7</item>
+        <item>Drop Down List 8</item>
+    </string-array>
+
 </resources>

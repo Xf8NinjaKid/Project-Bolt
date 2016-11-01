@@ -74,7 +74,7 @@ public class SplashActivity extends AppCompatActivity implements
     private GoogleApiClient client;
 
 
-    public static String getCountryName(Context context, double latitude, double longitude) {
+    public static String getCountryName(Context context, double longitude, double latitude) {
         Geocoder geocoder = new Geocoder(context, Locale.getDefault());
         List<Address> addresses;
         try {
@@ -338,7 +338,7 @@ public class SplashActivity extends AppCompatActivity implements
             String country = getCountryName(this, mLastLocation.getLongitude(), mLastLocation.getLatitude());
             Log.i(TAG, "area locale = " + String.valueOf(mLastLocation.getLatitude()) + " " + String.valueOf(mLastLocation.getLongitude()) + " : " + country);
 
-            if (!country.equals("0")) {
+            if (country != null) {
                 if (country.equals("Egypt") || country.equals("India")) {
                     isConnected();
 

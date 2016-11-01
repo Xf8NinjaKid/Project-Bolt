@@ -3,13 +3,17 @@ package com.ivy.green.bolt;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -32,6 +36,8 @@ public class UserActivity extends AppCompatActivity {
 
     EditText Email_input;
     EditText Password_input;
+
+    private Spinner spinner1;
 
     ProgressBar register;
 
@@ -60,12 +66,48 @@ public class UserActivity extends AppCompatActivity {
     public void onCreateSetup1(){
         TextView header = (TextView) findViewById(R.id.textView5);
         TextView body = (TextView) findViewById(R.id.textView7);
+        FloatingActionButton next = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
 
         header.setVisibility(View.GONE);
         body.setVisibility(View.GONE);
+        next.setVisibility(View.GONE);
+
+
+        spinner1 = (Spinner) findViewById(R.id.spinner);
+         header = (TextView) findViewById(R.id.textView8);
+         body = (TextView) findViewById(R.id.textView9);
+        ScrollView view = (ScrollView) findViewById(R.id.scrollView);
+
+        header.setVisibility(View.VISIBLE);
+        body.setVisibility(View.VISIBLE);
+        view.setVisibility(View.VISIBLE);
+
+        spinner1.setOnItemSelectedListener(new ItemSelectedListener());
 
 
 
+    }
+
+    public class ItemSelectedListener implements AdapterView.OnItemSelectedListener {
+
+        //get strings of first item
+        String firstItem = String.valueOf(spinner1.getSelectedItem());
+
+        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+            if (firstItem.equals(String.valueOf(spinner1.getSelectedItem()))) {
+                // ToDo when first item is selected
+            } else {
+                Toast.makeText(parent.getContext(),
+                        "You have selected : " + parent.getItemAtPosition(pos).toString(),
+                        Toast.LENGTH_LONG).show();
+                // Todo when item is selected by the user
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg) {
+
+        }
 
     }
 
@@ -131,10 +173,17 @@ public class UserActivity extends AppCompatActivity {
 
                                     Log.i(TAG, log);
 
-                                    getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-                                    getSupportActionBar().hide();
+
 
                                     setContentView(R.layout.setup_user);
+
+                                    TextView header = (TextView) findViewById(R.id.textView5);
+                                    TextView body = (TextView) findViewById(R.id.textView7);
+                                    FloatingActionButton next = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
+
+                                    header.setVisibility(View.VISIBLE);
+                                    body.setVisibility(View.VISIBLE);
+                                    next.setVisibility(View.VISIBLE);
 
                                     register.setVisibility(GONE);
 
