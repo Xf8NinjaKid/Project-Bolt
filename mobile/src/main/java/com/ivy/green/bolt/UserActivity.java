@@ -52,7 +52,7 @@ public class UserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_user);
+        //setContentView(R.layout.activity_user); 
         setContentView(R.layout.setup_user);
 
         Email_input = (EditText) findViewById(R.id.input_email);
@@ -177,6 +177,7 @@ public class UserActivity extends AppCompatActivity {
 
 
                                     setContentView(R.layout.setup_user);
+                                    getSupportActionBar().hide();
 
                                     TextView header = (TextView) findViewById(R.id.textView5);
                                     TextView body = (TextView) findViewById(R.id.textView7);
