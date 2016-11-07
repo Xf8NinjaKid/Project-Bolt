@@ -278,14 +278,13 @@ tools:context="com.ivy.green.bolt.SetupActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        app:fabSize="mini"
-        app:srcCompat="@drawable/cast_ic_expanded_controller_play"
+        app:srcCompat="@drawable/ic_arrow_forward_white_48dp"
         android:id="@+id/floatingActionButton2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.97"
-        app:layout_constraintVertical_bias="0.99"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintVertical_bias="0.98"
         android:onClick="setup"
         app:layout_constraintTop_toTopOf="@+id/imageView9" />
 

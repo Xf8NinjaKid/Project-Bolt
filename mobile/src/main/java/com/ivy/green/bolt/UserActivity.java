@@ -112,9 +112,6 @@ public class UserActivity extends AppCompatActivity {
 
     }
 
-    public void setup(View view){
-        onCreateSetup1();
-    }
 
     public void RegisterB(View view){
         Email = Email_input.getText().toString();
@@ -174,18 +171,6 @@ public class UserActivity extends AppCompatActivity {
 
                                     Log.i(TAG, log);
 
-
-
-                                    setContentView(R.layout.setup_user);
-                                    getSupportActionBar().hide();
-
-                                    TextView header = (TextView) findViewById(R.id.textView5);
-                                    TextView body = (TextView) findViewById(R.id.textView7);
-                                    FloatingActionButton next = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
-
-                                    header.setVisibility(View.VISIBLE);
-                                    body.setVisibility(View.VISIBLE);
-                                    next.setVisibility(View.VISIBLE);
 
                                     register.setVisibility(GONE);
 
