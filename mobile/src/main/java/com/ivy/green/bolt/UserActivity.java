@@ -53,7 +53,7 @@ public class UserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_user); 
-        setContentView(R.layout.setup_user);
+        setContentView(R.layout.activity_user);
 
         Email_input = (EditText) findViewById(R.id.input_email);
         Password_input = (EditText) findViewById(R.id.input_password);

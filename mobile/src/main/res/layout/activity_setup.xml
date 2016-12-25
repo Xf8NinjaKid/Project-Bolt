@@ -24,255 +24,87 @@ tools:context="com.ivy.green.bolt.SetupActivity">
     app:layout_constraintVertical_bias="0.0" />
 
 
-
-
-<ScrollView
-    android:layout_width="0dp"
-    android:id="@+id/scrollView"
-    android:fillViewport="true"
-    android:layout_height="0dp"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintTop_toBottomOf="@+id/imageView9"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintVertical_bias="0.0"
-    android:clipToPadding="false">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
-
-
-        <TextView
-            android:text="Congratulations!"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView5"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:fontFamily="sans-serif"
-            android:visibility="gone"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="0dp" />
-
-        <TextView
-            android:text="We have successfully created your account. In the next few prompts we would like to know more about you so that we can deliver the right expeiriance."
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView7"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            android:fontFamily="sans-serif-light"
-            android:textSize="12sp"
-            android:visibility="gone" />
-
-
-        <TextView
-            android:text="Welcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView8"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            app:layout_constraintTop_toBottomOf="@+id/imageView8"
-            app:layout_constraintBottom_toBottomOf="@+id/textView7"
-            app:layout_constraintVertical_bias="0.0"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginTop="4dp"
-            android:visibility="gone" />
-
-        <TextView
-            android:text="Firstly we would like to know where you live so that we can find your locale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView9"
-            app:layout_constraintLeft_toLeftOf="@+id/textView7"
-            app:layout_constraintTop_toBottomOf="@+id/textView8"
-            app:layout_constraintBottom_toBottomOf="@+id/textView7"
-            app:layout_constraintRight_toRightOf="@+id/textView7"
-            app:layout_constraintHorizontal_bias="0.78"
-            app:layout_constraintVertical_bias="0.0"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:textSize="10sp"
-            android:visibility="gone" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/layout"
-        android:layout_width="match_parent"
+    <TextView
+        android:text="Welcome"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone">
+        android:id="@+id/textView10"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintVertical_bias="0.0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <TextView
+        android:text="These are all the providers in your area, so please select which provider you use :)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:layout_marginStart="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:fontFamily="sans-serif-light" />
 
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton2"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView"
+        app:layout_constraintRight_toRightOf="@+id/scrollView"
+        app:layout_constraintLeft_toLeftOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_name_first"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content">
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView"
+        app:layout_constraintRight_toRightOf="@+id/scrollView"
+        app:layout_constraintLeft_toLeftOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.110000014"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
 
-                <EditText
-                    android:id="@+id/editText1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+    <TextView
+        android:text="Congratulations!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:fontFamily="sans-serif"
+        android:visibility="gone"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
 
-                    android:hint="First Name"
-                    android:textSize="16sp"
-                    android:fontFamily="sans-serif-light"
-                    android:selectAllOnFocus="true"
-                    android:textAlignment="textStart"
-                    android:contentDescription="Enter password"
-                    android:maxLines="1" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_name_last"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-
-                    android:hint="Last Name"
-                    android:textSize="16sp"
-                    android:fontFamily="sans-serif-light"
-                    android:selectAllOnFocus="true"
-                    android:textAlignment="textStart"
-                    android:contentDescription="Enter password"
-                    android:maxLines="1" />
-
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_city"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textNoSuggestions"
-
-                    android:hint="city"
-                    android:textSize="16sp"
-                    android:fontFamily="sans-serif-light"
-                    android:selectAllOnFocus="true"
-                    android:textAlignment="textStart"
-                    android:contentDescription="Enter password"
-                    android:maxLines="1" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_area"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/editText4"
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textNoSuggestions"
-
-                    android:hint="Area"
-                    android:textSize="16sp"
-                    android:fontFamily="sans-serif-light"
-                    android:selectAllOnFocus="true"
-                    android:textAlignment="textStart"
-                    android:contentDescription="Enter password"
-                    android:maxLines="1" />
-
-            </android.support.design.widget.TextInputLayout>
-
-        </LinearLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/editText5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPostalAddress"
-
-                android:hint="Address"
-                android:textSize="16sp"
-                android:fontFamily="sans-serif-light"
-                android:selectAllOnFocus="true"
-                android:textAlignment="textStart"
-                android:contentDescription="Enter password"
-                android:maxLines="1" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_code"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/editText6"
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-
-                    android:hint="Zip Code"
-                    android:textSize="16sp"
-                    android:fontFamily="sans-serif-light"
-                    android:selectAllOnFocus="true"
-                    android:textAlignment="textStart"
-                    android:contentDescription="Enter password"
-                    android:maxLines="1" />
-
-            </android.support.design.widget.TextInputLayout>
-
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#d11f08"
-                android:entries="@array/android_dropdown_arrays"
-                android:layout_marginTop="20dp"
-                />
-
-
-
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    <TextView
+        android:text="We have successfully created your account. In the next few prompts we would like to know more about you so that we can deliver the right expeiriance."
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:fontFamily="sans-serif-light"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintVertical_bias="0.0" />
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
@@ -287,6 +119,230 @@ tools:context="com.ivy.green.bolt.SetupActivity">
         app:layout_constraintVertical_bias="0.98"
         android:onClick="setup"
         app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+    <ScrollView
+    android:layout_width="0dp"
+    android:id="@+id/scrollView"
+    android:fillViewport="true"
+    android:layout_height="0dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintTop_toBottomOf="@+id/imageView9"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.0"
+    android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <TextView
+                android:text="Welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:text="Firstly we would like to know where you live so that we can find your locale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                app:layout_constraintLeft_toLeftOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintRight_toRightOf="@+id/textView7"
+                app:layout_constraintHorizontal_bias="0.78"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name_first"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:hint="First Name"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name_last"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:hint="Last Name"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textNoSuggestions"
+
+                        android:hint="city"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText4"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textNoSuggestions"
+
+                        android:hint="Area"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+
+                    android:hint="Address"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="textStart"
+                    android:contentDescription="Enter password"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText6"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+
+                        android:hint="Zip Code"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"
+                        android:selectAllOnFocus="true"
+                        android:textAlignment="textStart"
+                        android:contentDescription="Enter password"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#d11f08"
+                    android:entries="@array/android_dropdown_arrays"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>
