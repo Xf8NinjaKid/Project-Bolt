@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="327dp"
         android:layout_height="204dp"
-        app:srcCompat="@drawable/taipei_2560x1600_taiwan_101_night_artwork_hd_2873"
+        app:srcCompat="@drawable/background"
         android:id="@+id/imageView8"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"

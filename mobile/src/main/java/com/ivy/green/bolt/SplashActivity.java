@@ -55,6 +55,7 @@ public class SplashActivity extends AppCompatActivity implements
 
 
     private static final String TAG = "MainActivity";
+    private static final int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 20;
 
     /**
      * Provides the entry point to Google Play services.
@@ -269,6 +270,24 @@ public class SplashActivity extends AppCompatActivity implements
         alertDialog.show();
     }
 
+    public void LocationDeined() {
+
+        final AlertDialog.Builder LocationDenied = new AlertDialog.Builder(SplashActivity.this);
+        LocationDenied.setTitle("Location services permission denied");
+        LocationDenied.setMessage("Looks like you didn't give us permission to access your location, your location helps us personalize the app just for you. please grant us permission to use your location, to carry on using the app.");
+
+        LocationDenied.setNeutralButton("Exit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+                exit(0);
+            }
+        });
+
+        AlertDialog alertDialog = LocationDenied.create();
+        alertDialog.show();
+    }
+
     /**
      * Builds a GoogleApiClient. Uses the addApi() method to request the LocationServices API.
      */
@@ -282,34 +301,49 @@ public class SplashActivity extends AppCompatActivity implements
 
     @Override
     protected void onStart() {
-        super.onStart();// ATTENTION: This was auto-generated to implement the App Indexing API.
-// See https://g.co/AppIndexing/AndroidStudio for more information.
+        super.onStart();
         client.connect();
         mGoogleApiClient.connect();
 
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
 
     @Override
     protected void onStop() {
-        super.onStop();// ATTENTION: This was auto-generated to implement the App Indexing API.
-// See https://g.co/AppIndexing/AndroidStudio for more information.
-
+        super.onStop();
 
         if (mGoogleApiClient.isConnected()) {
             mGoogleApiClient.disconnect();
         }
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         client.disconnect();
     }
 
     /**
      * Runs when a GoogleApiClient object successfully connects.
      */
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_ACCESS_FINE_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+
+                } else {
+
+                    LocationDeined();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+    }
 
     @Override
     public void onConnected(Bundle connectionHint) {
@@ -320,40 +354,16 @@ public class SplashActivity extends AppCompatActivity implements
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
                 PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) !=
                  PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+
+
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_ACCESS_FINE_LOCATION);
+
 
             return;
         }
 
         Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
-        if (mLastLocation != null) {
-
-            String country = getCountryName(this, mLastLocation.getLongitude(), mLastLocation.getLatitude());
-            //Log.i(TAG, "area locale = " + String.valueOf(mLastLocation.getLatitude()) + String.valueOf(mLastLocation.getLongitude()));
-
-            if (!country.equals("0")) {
-                if (country.equals("Egypt") || country.equals("India")) {
-                    isConnected();
-
-
-                } else {
-                    noLocation();
-                }
-            } else {
-                errorLocation();
-            }
-
-
-        } else {
-            Toast.makeText(this, R.string.no_location_detected, Toast.LENGTH_LONG).show();
-        }
     }
 
     /**
@@ -371,9 +381,9 @@ public class SplashActivity extends AppCompatActivity implements
     }
 
     private void errorLocation() {
-        final AlertDialog.Builder errorLcoation = new AlertDialog.Builder(SplashActivity.this);
-        errorLcoation.setTitle("Error detecting your Location");
-        errorLcoation.setMessage("Sorry for the inconvenience but it looks like we couldn't get your location so please try again after enabling Wi-Fi and location services");
+        final AlertDialog.Builder errorLocation = new AlertDialog.Builder(SplashActivity.this);
+        errorLocation.setTitle("Error detecting your Location");
+        errorLocation.setMessage("Sorry for the inconvenience but it looks like we couldn't get your location so please try again after enabling Wi-Fi and location services");
     }
 
 
@@ -385,10 +395,6 @@ public class SplashActivity extends AppCompatActivity implements
         mGoogleApiClient.connect();
     }
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("Bolt")
@@ -400,3 +406,28 @@ public class SplashActivity extends AppCompatActivity implements
                 .build();
     }
 }
+
+/*
+
+if (mLastLocation != null) {
+
+        String country = getCountryName(this, mLastLocation.getLongitude(), mLastLocation.getLatitude());
+        //Log.i(TAG, "area locale = " + String.valueOf(mLastLocation.getLatitude()) + String.valueOf(mLastLocation.getLongitude()));
+
+        if (!country.equals("0") || !country.equals((null))) {
+        if (country.equals("Egypt") || country.equals("India")) {
+        isConnected();
+
+
+        } else {
+        noLocation();
+        }
+        } else {
+        errorLocation();
+        }
+
+
+        } else {
+        Toast.makeText(this, R.string.no_location_detected, Toast.LENGTH_LONG).show();
+        }
+       */
